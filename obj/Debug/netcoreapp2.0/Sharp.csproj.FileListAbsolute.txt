@@ -1,0 +1,10 @@
+E:\Web\Sites\VSCode\Sharp\bin\Debug\netcoreapp2.0\Sharp.deps.json
+E:\Web\Sites\VSCode\Sharp\bin\Debug\netcoreapp2.0\Sharp.runtimeconfig.json
+E:\Web\Sites\VSCode\Sharp\bin\Debug\netcoreapp2.0\Sharp.runtimeconfig.dev.json
+E:\Web\Sites\VSCode\Sharp\bin\Debug\netcoreapp2.0\Sharp.dll
+E:\Web\Sites\VSCode\Sharp\bin\Debug\netcoreapp2.0\Sharp.pdb
+E:\Web\Sites\VSCode\Sharp\obj\Debug\netcoreapp2.0\Sharp.csproj.CoreCompileInputs.cache
+E:\Web\Sites\VSCode\Sharp\obj\Debug\netcoreapp2.0\Sharp.AssemblyInfoInputs.cache
+E:\Web\Sites\VSCode\Sharp\obj\Debug\netcoreapp2.0\Sharp.AssemblyInfo.cs
+E:\Web\Sites\VSCode\Sharp\obj\Debug\netcoreapp2.0\Sharp.dll
+E:\Web\Sites\VSCode\Sharp\obj\Debug\netcoreapp2.0\Sharp.pdb
