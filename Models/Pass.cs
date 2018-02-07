@@ -2,7 +2,7 @@ using System;
 
 namespace Sharp.Models
 {
-    class Pass
+    public class Pass
     {
         public static void Value(int param)
         {
