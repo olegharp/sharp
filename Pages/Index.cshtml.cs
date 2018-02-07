@@ -26,6 +26,10 @@ public class IndexPageModel : PageModel
             this.month = mm;
             this.day = dd - 1;
         }
+        public override string ToString()
+        {
+            return $"{this.month} {this.day + 1} {this.year + 1900}";
+        }
     }
 
     public void OnGet()
@@ -46,9 +50,11 @@ public class IndexPageModel : PageModel
         double distance = origin.DistanceTo(bottomRight);
         var myAnonymousObject = new { Name = "John", Age = 47 };
 
+        var d = new Date(1985, Month.December, 5);
+
         // ViewData["Message"] = $"Distance = {distance.ToString()}; Number of Point objects: {Point.ObjectCount()}";
         // Response.WriteAsync($"myAnonymousObject.Name: {myAnonymousObject.Name}; myAnonymousObject.Age: {myAnonymousObject.Age}");
-        ViewData["Message"] = $"Last month + 1 = {last}";
+        ViewData["Message"] = $"d = {d.ToString()}";
     }
 
 }
