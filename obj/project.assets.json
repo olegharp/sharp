@@ -12540,11 +12540,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\WEB\\Sites\\VSCode\\sharp\\Sharp.csproj",
+      "projectUniqueName": "E:\\Web\\Sites\\VSCode\\Sharp\\Sharp.csproj",
       "projectName": "Sharp",
-      "projectPath": "E:\\WEB\\Sites\\VSCode\\sharp\\Sharp.csproj",
+      "projectPath": "E:\\Web\\Sites\\VSCode\\Sharp\\Sharp.csproj",
       "packagesPath": "C:\\Users\\oleg_\\.nuget\\packages\\",
-      "outputPath": "E:\\WEB\\Sites\\VSCode\\sharp\\obj\\",
+      "outputPath": "E:\\Web\\Sites\\VSCode\\Sharp\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -12572,14 +12572,14 @@
     "frameworks": {
       "netcoreapp2.0": {
         "dependencies": {
-          "Microsoft.NETCore.App": {
-            "target": "Package",
-            "version": "2.0",
-            "autoReferenced": true
-          },
           "Microsoft.AspNetCore.All": {
             "target": "Package",
-            "version": "2.0.3"
+            "version": "[2.0.3, )"
+          },
+          "Microsoft.NETCore.App": {
+            "target": "Package",
+            "version": "[2.0.0, )",
+            "autoReferenced": true
           }
         },
         "imports": [
