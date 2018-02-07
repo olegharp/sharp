@@ -10,6 +10,13 @@ public class IndexPageModel : PageModel
     public void OnGet()
     {
 
+        int? i = null;
+
+        if (i.HasValue)
+        {   
+            int? k = i.Value;
+        }
+
         Point origin = new Point();
         Point bottomRight = new Point(1366, 768);
         double distance = origin.DistanceTo(bottomRight);
