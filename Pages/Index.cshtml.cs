@@ -5,7 +5,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.AspNetCore.Mvc;
 using Sharp.Models;
 
-public class IndexPageModel : PageModel
+public class IndexModel : PageModel
 {
     enum Season : byte { Spring, Summer, Fall, Autumn = Fall, Winter };
     enum Month : byte
@@ -32,8 +32,34 @@ public class IndexPageModel : PageModel
         }
     }
 
+    Date[] dar = { new Date(), new Date() };
+
+    public void ArrMethod(int[] arr)
+    {
+        for (int i = 0; i < arr.Length; i++)
+        {
+            arr[i]++;
+        }
+    }
+
+    public string ArrList(int[] arr)
+    {
+        string outString = string.Empty;
+        foreach (int item in arr)
+        {
+            outString += item + "; ";
+        }
+        return outString;
+    }
+
     public void OnGet()
     {
+        var names = new[] { new { Name = "John" }, new { Name = "Tilda" } };
+        int[] intArr = { 1, 5, 9, 45, 6 };
+        ArrMethod(intArr);
+        int[] newArr = new int[1];
+        Array.Copy(intArr, newArr, newArr.Length);
+        // intArr.CopyTo(newArr, 0);
         // Season cold = Season.Winter;
         Month last = Month.December;
         last++;
@@ -41,7 +67,7 @@ public class IndexPageModel : PageModel
         int? i = null;
 
         if (i.HasValue)
-        {   
+        {
             int? k = i.Value;
         }
 
@@ -51,10 +77,12 @@ public class IndexPageModel : PageModel
         var myAnonymousObject = new { Name = "John", Age = 47 };
 
         var d = new Date(1985, Month.December, 5);
+        // Date defaultDay = new  Date();
 
         // ViewData["Message"] = $"Distance = {distance.ToString()}; Number of Point objects: {Point.ObjectCount()}";
         // Response.WriteAsync($"myAnonymousObject.Name: {myAnonymousObject.Name}; myAnonymousObject.Age: {myAnonymousObject.Age}");
-        ViewData["Message"] = $"d = {d.ToString()}";
+        // ViewData["Message"] = $"d = {ArrList(newArr)}";
+        ViewData["Message"] = $"d = {Utils.Sum(null)}";
     }
 
 }
