@@ -76,6 +76,8 @@ namespace Sharp.Pages
 
         public void OnGet()
         {
+            DrawClass dc = new DrawClass();
+            dc.Meth();
             Horse myHorse = new Horse();
             Mammal myMammal = myHorse;
             Horse myHorseAgain = myMammal as Horse;
