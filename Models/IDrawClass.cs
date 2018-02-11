@@ -9,9 +9,9 @@ namespace Sharp.Models
 {
     class DrawClass: IDraw
     {
-        public void Meth()
+        void IDraw.Meth()
         {
-            throw new NotImplementedException();
+            // throw new NotImplementedException();
         }
     }
 }
