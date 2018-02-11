@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.AspNetCore.Mvc;
 using Sharp.Models;
+using Sharp.Services;
 
 namespace Sharp.Pages
 {
@@ -76,8 +77,15 @@ namespace Sharp.Pages
 
         public void OnGet()
         {
+
+            Employee emp = new Employee(100);
+            
             DrawClass dc = new DrawClass();
-            dc.Meth();
+            if (dc is IDraw)
+            {
+                IDraw idr = dc;
+                idr.Meth();
+            }
             Horse myHorse = new Horse();
             Mammal myMammal = myHorse;
             Horse myHorseAgain = myMammal as Horse;
@@ -113,7 +121,7 @@ namespace Sharp.Pages
             // ViewData["Message"] = $"Distance = {distance.ToString()}; Number of Point objects: {Point.ObjectCount()}";
             // Response.WriteAsync($"myAnonymousObject.Name: {myAnonymousObject.Name}; myAnonymousObject.Age: {myAnonymousObject.Age}");
             // ViewData["Message"] = $"d = {ArrList(newArr)}";
-            ViewData["Message"] = $"myHorse.ToString() - {myHorseAgain?.ToString() ?? "null"}";
+            ViewData["Message"] = $"emp.Id - {emp.Id}";
         }
 
     }
