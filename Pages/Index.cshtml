@@ -2,4 +2,8 @@
 @using Sharp.Pages
 @model IndexModel
 
+@foreach(var item in Model.q)
+{
+    <p>@item.ToString()</p>
+}
 <div>@ViewData["Message"]</div>

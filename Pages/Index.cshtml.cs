@@ -12,6 +12,7 @@ namespace Sharp.Pages
 
     public class IndexModel : PageModel
     {
+        public int[] q;
         enum Season : byte { Spring, Summer, Fall, Autumn = Fall, Winter };
         enum Month : byte
         {
@@ -78,6 +79,8 @@ namespace Sharp.Pages
         public void OnGet()
         {
 
+            q = new int[50];
+
             Employee emp = new Employee(100);
             
             DrawClass dc = new DrawClass();
@@ -121,7 +124,7 @@ namespace Sharp.Pages
             // ViewData["Message"] = $"Distance = {distance.ToString()}; Number of Point objects: {Point.ObjectCount()}";
             // Response.WriteAsync($"myAnonymousObject.Name: {myAnonymousObject.Name}; myAnonymousObject.Age: {myAnonymousObject.Age}");
             // ViewData["Message"] = $"d = {ArrList(newArr)}";
-            ViewData["Message"] = $"emp.Id - {emp.Id}";
+            ViewData["Message"] = $"q.Length - {q.Length}";
         }
 
     }
