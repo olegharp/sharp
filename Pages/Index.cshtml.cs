@@ -1,4 +1,5 @@
 using System;
+using System.Text;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc.Rendering;
@@ -75,14 +76,30 @@ namespace Sharp.Pages
         {
             
         }
-
+        enum EmpType: byte
+        {
+            Manager = 10,
+            Grunt = 1,
+            Contractor = 100, 
+            VicePresident = 99
+        }
         public void OnGet()
         {
+            EmpType emp = EmpType.Manager;
+            string str1 = "Flip";
+            string str2 = "Flop";
+
+            void Swap(ref string s1, ref string s2)
+            {
+                string temp = s1;
+                s1 = s2;
+                s2 = temp;
+            }
+            Array enumData = Enum.GetValues(emp.GetType());
+            Swap(ref str1, ref str2);
 
             q = new int[50];
 
-            Employee emp = new Employee(100);
-            
             DrawClass dc = new DrawClass();
             if (dc is IDraw)
             {
@@ -120,8 +137,9 @@ namespace Sharp.Pages
 
             var d = new Date(1985, Month.December, 5);
             // Date defaultDay = new  Date();
-
-            ViewData["Message"] = $"The narwhal bacons at midnight. - {Kata.AlphabetPosition("The narwhal bacons at midnight.")}";
+            DateTime dt = new DateTime(1985, 5, 16);
+            StringBuilder sb = new StringBuilder("*****OPa*****");
+            ViewData["Message"] = $"{emp}";
         }
 
     }
