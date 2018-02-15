@@ -121,10 +121,7 @@ namespace Sharp.Pages
             var d = new Date(1985, Month.December, 5);
             // Date defaultDay = new  Date();
 
-            // ViewData["Message"] = $"Distance = {distance.ToString()}; Number of Point objects: {Point.ObjectCount()}";
-            // Response.WriteAsync($"myAnonymousObject.Name: {myAnonymousObject.Name}; myAnonymousObject.Age: {myAnonymousObject.Age}");
-            // ViewData["Message"] = $"d = {ArrList(newArr)}";
-            ViewData["Message"] = $"q.Length - {q.Length}";
+            ViewData["Message"] = $"The narwhal bacons at midnight. - {Kata.AlphabetPosition("The narwhal bacons at midnight.")}";
         }
 
     }
